@@ -34,14 +34,21 @@ NIFTY50_TICKERS = [
 LATEST_PAYLOAD = {}
 
 class BGCKKeyManager:
-    """Manages server-side Gemini API key rotation for mission-critical failover."""
     def __init__(self):
-        load_dotenv()
-        self.keys: List[str] = [
-            os.getenv(f"GEMINI_API_KEY_{i}") for i in range(1, 6)
-        ]
-        self.keys = [k for k in self.keys if k]  # Cleanup empty keys
+        # Mission-Critical: Rely strictly on environment variables for public repo safety
+        self.keys = []
+        for i in range(1, 6):
+            key = os.getenv(f"GEMINI_API_KEY_{i}")
+            if key:
+                self.keys.append(key)
+                
         self.current_idx = 0
+        
+        # Legacy support
+        if not self.keys:
+            singleton = os.getenv("GEMINI_API_KEY")
+            if singleton:
+                self.keys = [singleton]
 
         if not self.keys:
             # Fallback for legacy singleton key
