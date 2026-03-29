@@ -2,14 +2,14 @@
 
 <div align="center">
 
-![Python 3.11 Strict](https://img.shields.io/badge/python-3.11%20Strict-blue.svg)
-![FastAPI](https://img.shields.io/badge/framework-FastAPI-009688.svg)
-![Three.js](https://img.shields.io/badge/frontend-Three.js%20WebGL-black.svg)
-![Gemini](https://img.shields.io/badge/AI-Gemini%202.5%20Flash-orange.svg)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render.com-green.svg?style=for-the-badge&logo=render)](https://bgck-quant-fintech.onrender.com/)
+[![Python 3.11 Strict](https://img.shields.io/badge/python-3.11%20Strict-blue.svg?style=for-the-badge)](https://www.python.org/downloads/release/python-31110/)
+[![Gemini 2.5 Flash](https://img.shields.io/badge/AI-Gemini%202.5%20Flash-orange.svg?style=for-the-badge)](https://aistudio.google.com/)
 
 </div>
 
-**CRITICAL DEPENDENCY WARNING**
+> [!IMPORTANT]
+> **🚀 COMPETITION SUBMISSION:** This project is a Live Agentic Quant Terminal. The **[Live Demo](https://bgck-quant-fintech.onrender.com/)** showcases the full WebGL-enhanced tactical dashboard running real-time financial manifolds.
 
 This project **strictly requires Python 3.11.x**. Do not use Python 3.12 or newer. Core mathematical and topological libraries used in this engine (giotto-tda, z3-solver, pydmd) require specific C++ build binaries that are optimized and tested exclusively for Python 3.11.
 
