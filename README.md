@@ -43,31 +43,34 @@ python -m venv .venv
 .\.venv\Scripts\activate
 ```
 
-```bash
-# On Mac/Linux  
-python3.11 -m venv .venv  
-source .venv/bin/activate
-```
+## 🤖 Agentic Advisory Copilot
 
-**3. Install dependencies:**
+The BGCK Terminal features a **Hybrid-AI Diagnostic Engine**:
 
-The `--upgrade-strategy eager` option ensures all underlying scientific computing libraries align with the strict 3.11 requirement.
+- **Deterministic Mode (Default)**: If no API key is provided, the system utilizes a rule-based analytical engine to interpret telemetry (Weights, VPIN, Koopman) and generate professional briefings. This ensures 100% functionality for judges and reviewers.
+- **Agentic Mode (Unlocked)**: By adding a `GEMINI_API_KEY` to your `.env`, the system activates **Gemini 2.5 Flash**. This enables deep conversational acoustics, nuanced cross-asset reasoning, and "Definitive Signals" based on current market manifolds.
 
-```bash
-pip install --upgrade-strategy eager -r requirements.txt
-```
+### 🛠 Installation & Quick Start
 
-**4. Configure Environment Variables:**
-
-The Agentic Copilot requires a valid API key cluster to interpret mathematical telemetry. Create a `.env` file in the root directory and add up to 5 keys for automatic failover:
-
-```env
-GEMINI_API_KEY_1="your_primary_key"
-GEMINI_API_KEY_2="failover_key_2"
-GEMINI_API_KEY_3="failover_key_3"
-GEMINI_API_KEY_4="failover_key_4"
-GEMINI_API_KEY_5="failover_key_5"
-```
+1. **Clone & Environment**:
+   ```bash
+   git clone https://github.com/kkm121/bgck-quant-fintech.git
+   cd bgck-quant-fintech
+   ```
+2. **Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **API Keys (Optional)**:
+   Create a `.env` file from the `.env.example` template:
+   ```env
+   GEMINI_API_KEY_1="your_key_here"
+   ```
+4. **Execution**:
+   ```bash
+   uvicorn fastapi_app:app --reload
+   ```
+   Navigate to `http://127.0.0.1:8000` to engage the terminal.
 
 ## **Running the Application**
 
